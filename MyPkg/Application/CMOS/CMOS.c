@@ -9,6 +9,7 @@ Usage(void)
     Print(L"2. Bank         : 0 / 1\n");
     Print(L"3. Offset       : 0x00~0xFF\n");
     Print(L"4. Value        : 0x00~0xFF\n");
+    Print(L"123\n");
 
 }
 
