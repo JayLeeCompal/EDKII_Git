@@ -1,0 +1,15 @@
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/SetMem.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/ScanMem64Wrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/ScanMem32Wrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/ScanMem16Wrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/ScanMem8Wrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/ZeroMemWrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/CompareMemWrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/SetMem64Wrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/SetMem32Wrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/SetMem16Wrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/SetMemWrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/CopyMemWrapper.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/MemLibGeneric.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/MemLibGuid.obj
+q:/Build/MyPkg/RELEASE_DEVTLS/X64/MdePkg/Library/BaseMemoryLib/BaseMemoryLib/OUTPUT/CopyMem.obj

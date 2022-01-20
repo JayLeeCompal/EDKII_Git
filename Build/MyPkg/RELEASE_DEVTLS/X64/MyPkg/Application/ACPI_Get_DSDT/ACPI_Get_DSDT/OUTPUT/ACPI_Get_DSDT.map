@@ -1,0 +1,190 @@
+ ACPI_Get_DSDT
+
+ Timestamp is 61e9110e (Thu Jan 20 15:36:46 2022)
+
+ Preferred load address is 0000000000000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00001de3H .text                   CODE
+ 0002:00000000 00000000H .data                   DATA
+ 0002:00000000 0000108fH .rdata                  DATA
+ 0002:00001090 00000020H .bss                    DATA
+ 0003:00000000 0000015cH .pdata                  DATA
+ 0004:00000000 000000f8H .xdata                  DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0001:00000000       _ModuleEntryPoint          00000000000002a0 f   UefiApplicationEntryPoint:ApplicationEntryPoint.obj
+ 0001:00000064       UefiBootServicesTableLibConstructor 0000000000000304 f   UefiBootServicesTableLib:UefiBootServicesTableLib.obj
+ 0001:00000110       ProcessLibraryConstructorList 00000000000003b0 f   ACPI_Get_DSDT:AutoGen.obj
+ 0001:00000250       ProcessModuleEntryPointList 00000000000004f0 f   ACPI_Get_DSDT:AutoGen.obj
+ 0001:00000258       Usage                      00000000000004f8 f   ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0001:00000284       Acpi_main                  0000000000000524 f   ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0001:000004dc       UefiMain                   000000000000077c f   ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0001:00000570       DebugPrint                 0000000000000810 f   BaseDebugLibNull:DebugLib.obj
+ 0001:0000057c       ProcessLibraryDestructorList 000000000000081c f   ACPI_Get_DSDT:AutoGen.obj
+ 0001:0000057c       DebugAssert                000000000000081c f   BaseDebugLibNull:DebugLib.obj
+ 0001:00000580       DebugAssertEnabled         0000000000000820 f   BaseDebugLibNull:DebugLib.obj
+ 0001:00000580       DebugPrintEnabled          0000000000000820 f   BaseDebugLibNull:DebugLib.obj
+ 0001:00000580       DebugPrintLevelEnabled     0000000000000820 f   BaseDebugLibNull:DebugLib.obj
+ 0001:00000584       Print_Register_Table       0000000000000824 f   COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0001:00000614       AsciiToUnicodeSize         00000000000008b4 f   COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0001:0000065c       PrintFadtHeader            00000000000008fc f   COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0001:00000774       PrintAcpiTable             0000000000000a14 f   COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0001:000007e8       StrLen                     0000000000000a88 f   BaseLib:String.obj
+ 0001:000008a0       StrSize                    0000000000000b40 f   BaseLib:String.obj
+ 0001:000008b4       StrCmp                     0000000000000b54 f   BaseLib:String.obj
+ 0001:00000964       AsciiStrLen                0000000000000c04 f   BaseLib:String.obj
+ 0001:000009ec       AsciiStrSize               0000000000000c8c f   BaseLib:String.obj
+ 0001:00000a00       InternalMathDivRemU64x32   0000000000000ca0 f   BaseLib:Math64.obj
+ 0001:00000a1c       UefiRuntimeServicesTableLibConstructor 0000000000000cbc f   UefiRuntimeServicesTableLib:UefiRuntimeServicesTableLib.obj
+ 0001:00000a60       UefiLibConstructor         0000000000000d00 f   UefiLib:UefiLib.obj
+ 0001:00000a64       EfiGetSystemConfigurationTable 0000000000000d04 f   UefiLib:UefiLib.obj
+ 0001:00000b3c       InternalPrint              0000000000000ddc f   UefiLib:UefiLibPrint.obj
+ 0001:00000c5c       Print                      0000000000000efc f   UefiLib:UefiLibPrint.obj
+ 0001:00000c8c       InternalAllocatePool       0000000000000f2c f   UefiMemoryAllocationLib:MemoryAllocationLib.obj
+ 0001:00000cb8       AllocatePool               0000000000000f58 f   UefiMemoryAllocationLib:MemoryAllocationLib.obj
+ 0001:00000cc8       FreePool                   0000000000000f68 f   UefiMemoryAllocationLib:MemoryAllocationLib.obj
+ 0001:00000d3c       UnicodeVSPrint             0000000000000fdc f   BasePrintLib:PrintLib.obj
+ 0001:00000de0       BasePrintLibFillBuffer     0000000000001080 f   BasePrintLib:PrintLibInternal.obj
+ 0001:00000e14       BasePrintLibValueToString  00000000000010b4 f   BasePrintLib:PrintLibInternal.obj
+ 0001:00000e64       BasePrintLibSPrintMarker   0000000000001104 f   BasePrintLib:PrintLibInternal.obj
+ 0001:00001c58       BasePrintLibSPrint         0000000000001ef8 f   BasePrintLib:PrintLibInternal.obj
+ 0001:00001c7c       ReadUnaligned16            0000000000001f1c f   BaseLib:Unaligned.obj
+ 0001:00001cb4       ReadUnaligned32            0000000000001f54 f   BaseLib:Unaligned.obj
+ 0001:00001cec       ReadUnaligned64            0000000000001f8c f   BaseLib:Unaligned.obj
+ 0001:00001d24       DivU64x32Remainder         0000000000001fc4 f   BaseLib:DivU64x32Remainder.obj
+ 0001:00001d7c       CompareGuid                000000000000201c f   BaseMemoryLib:MemLibGuid.obj
+ 0002:00000000       ??_C@_0BE@BDFJLGLN@gBS?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 00000000000020a0     UefiBootServicesTableLib:UefiBootServicesTableLib.obj
+ 0002:00000018       ??_C@_0BE@DGNHAHIL@gST?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 00000000000020b8     UefiBootServicesTableLib:UefiBootServicesTableLib.obj
+ 0002:00000030       ??_C@_0EG@IHBEIGJL@q?3?2MdePkg?2Library?2UefiBootServic@ 00000000000020d0     UefiBootServicesTableLib:UefiBootServicesTableLib.obj
+ 0002:00000078       ??_C@_0BN@COECPDCC@gImageHandle?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 0000000000002118     UefiBootServicesTableLib:UefiBootServicesTableLib.obj
+ 0002:00000098       _gPcd_FixedAtBuild_PcdMaximumUnicodeStringLength 0000000000002138     ACPI_Get_DSDT:AutoGen.obj
+ 0002:00000098       _gPcd_FixedAtBuild_PcdMaximumAsciiStringLength 0000000000002138     ACPI_Get_DSDT:AutoGen.obj
+ 0002:0000009c       _gPcd_FixedAtBuild_PcdUefiLibMaxPrintBufferSize 000000000000213c     ACPI_Get_DSDT:AutoGen.obj
+ 0002:000000a0       _gUefiDriverRevision       0000000000002140     ACPI_Get_DSDT:AutoGen.obj
+ 0002:000000b0       ??_C@_0GA@HIIIDCPG@q?3?2Build?2MyPkg?2RELEASE_DEVTLS?2X6@ 0000000000002150     ACPI_Get_DSDT:AutoGen.obj
+ 0002:00000110       ??_C@_0BE@DCHLEIGN@?$CBEFI_ERROR?5?$CIStatus?$CJ?$AA@ 00000000000021b0     ACPI_Get_DSDT:AutoGen.obj
+ 0002:00000128       ??_C@_0CB@DMEJJJHA@?6ASSERT_EFI_ERROR?5?$CIStatus?5?$DN?5?$CFr?$CJ?6@ 00000000000021c8     ACPI_Get_DSDT:AutoGen.obj
+ 0002:00000150       ??_C@_1DM@MJHLGNAD@?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AAS?$AAh?$AAo?$AAw?$AAX?$AAS?$AAD?$AAT?$AA?5?$AA?5?$AA?9?$AAx?$AA?5?$AA?$HM?$AA?5?$AA?9?$AA?9?$AAx?$AAs?$AAd?$AAt?$AA?6?$AA?$AA@ 00000000000021f0     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000190       ??_C@_1DM@IKBOFAHC@?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AAS?$AAh?$AAo?$AAw?$AAF?$AAA?$AAC?$AAP?$AA?5?$AA?5?$AA?9?$AAd?$AA?5?$AA?$HM?$AA?5?$AA?9?$AA?9?$AAd?$AAu?$AAm?$AAp?$AA?6?$AA?$AA@ 0000000000002230     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:000001d0       ??_C@_1EC@BFHAPCNP@?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AAS?$AAh?$AAo?$AAw?$AAF?$AAA?$AAC?$AAP?$AA?5?$AA?5?$AA?9?$AAv?$AA?5?$AA?$HM?$AA?5?$AA?9?$AA?9?$AAv?$AAe?$AAr?$AAb?$AAo?$AAs?$AAe?$AA?6@ 0000000000002270     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000218       ??_C@_1DO@DOJAFFJC@?$AAD?$AAs?$AAd?$AAt?$AA?5?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA0?$AAx?$AA?$CF?$AAX?$AA?5?$AA?9?$AA?5?$AAD?$AAS?$AAD?$AAT?$AA?6?$AA?$AA@ 00000000000022b8     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000258       ??_C@_1DO@GBMHGFOP@?$AAF?$AAi?$AAr?$AAm?$AAw?$AAa?$AAr?$AAe?$AA?5?$AAC?$AAo?$AAn?$AAt?$AAr?$AAo?$AAl?$AA?3?$AA?5?$AA0?$AAx?$AA?$CF?$AAX?$AA?5?$AA?9?$AA?5?$AAF?$AAA?$AAC?$AAS?$AA?6?$AA?$AA@ 00000000000022f8     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000298       ??_C@_1DE@MDFNMJDC@?$AAF?$AAA?$AAC?$AAP?$AA?5?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA0?$AAx?$AA?$CF?$AA0?$AA8?$AAx?$AA?6?$AA?$AA@ 0000000000002338     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:000002d0       ??_C@_1CO@LDJDJFMK@?$AA?6?$AAA?$AAC?$AAP?$AAI?$AA?5?$AAS?$AAt?$AAa?$AAn?$AAd?$AAa?$AAr?$AAd?$AA?5?$AAH?$AAe?$AAa?$AAd?$AAe?$AAr?$AA?6?$AA?$AA@ 0000000000002370     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000300       ??_C@_17MEDFOIMI@?$AA?5?$AA?5?$AA?5?$AA?$AA@ 00000000000023a0     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000308       ??_C@_1CI@MCHEMOIC@?$AAX?$AAS?$AAD?$AAT?$AA?5?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AA?3?$AA0?$AAx?$AA?$CF?$AAX?$AA?6?$AA?$AA@ 00000000000023a8     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000330       ??_C@_1CI@KPPGCJGK@?$AAR?$AAS?$AAD?$AAP?$AA?5?$AAa?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs?$AA?5?$AA?3?$AA0?$AAx?$AA?$CF?$AAX?$AA?6?$AA?$AA@ 00000000000023d0     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000358       ??_C@_1DG@JLKFDIHC@?$AA?5?$AA?$CF?$AA0?$AA2?$AAd?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?$CF?$AAs?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA0?$AAx?$AA?$CF?$AAX?$AA?6?$AA?$AA@ 00000000000023f8     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000390       ??_C@_1EE@DKPLGLHN@?$AAE?$AAn?$AAt?$AAr?$AAy?$AA?5?$AA?5?$AA?5?$AA?5?$AAS?$AAi?$AAg?$AAn?$AAa?$AAt?$AAu?$AAr?$AAe?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AAA?$AAd?$AAd?$AAr?$AAe?$AAs?$AAs@ 0000000000002430     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:000003d4       ??_C@_15FLIEMAMH@?$AA?9?$AAx?$AA?$AA@ 0000000000002474     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:000003e0       ??_C@_1O@GCDNHNDF@?$AA?9?$AA?9?$AAx?$AAs?$AAd?$AAt?$AA?$AA@ 0000000000002480     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:000003f0       ??_C@_15EBELCIOA@?$AA?9?$AAd?$AA?$AA@ 0000000000002490     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:000003f8       ??_C@_1O@DBKNNDEL@?$AA?9?$AA?9?$AAd?$AAu?$AAm?$AAp?$AA?$AA@ 0000000000002498     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000408       ??_C@_15LLFLLHPE@?$AA?9?$AAv?$AA?$AA@ 00000000000024a8     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000410       ??_C@_1BE@ODAFHPNJ@?$AA?9?$AA?9?$AAv?$AAe?$AAr?$AAb?$AAo?$AAs?$AAe?$AA?$AA@ 00000000000024b0     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000428       ??_C@_1BK@DMCIIGFF@?$AAS?$AAt?$AAa?$AAt?$AAu?$AAs?$AA?5?$AA?3?$AA?5?$AA?$CF?$AAd?$AA?6?$AA?$AA@ 00000000000024c8     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000448       ??_C@_1CO@KECJBDOB@?$AAC?$AAa?$AAn?$AA?8?$AAt?$AA?5?$AAf?$AAi?$AAn?$AAd?$AA?5?$AAA?$AAc?$AAp?$AAi?$AA?5?$AAT?$AAa?$AAb?$AAl?$AAe?$AA?6?$AA?$AA@ 00000000000024e8     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:00000478       ??_C@_1DC@NKIPJBML@?$AA?6?$AA?5?$AAF?$AAa?$AAi?$AAl?$AA?5?$AAt?$AAo?$AA?5?$AAO?$AAp?$AAe?$AAn?$AA?5?$AAP?$AAr?$AAo?$AAt?$AAo?$AAc?$AAo?$AAl?$AA?6?$AA?$AA@ 0000000000002518     ACPI_Get_DSDT:ACPI_Get_DSDT.obj
+ 0002:000004b0       ??_C@_1BA@OBPGDHCB@?$AA?6?$AA?$CF?$AA0?$AA3?$AAx?$AA?5?$AA?5?$AA?$AA@ 0000000000002550     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:000004c0       ??_C@_13LBAGMAIH@?$AA?6?$AA?$AA@ 0000000000002560     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:000004c8       ??_C@_19ICFDFJBB@?$AA0?$AA?$CF?$AAx?$AA?5?$AA?$AA@ 0000000000002568     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:000004d8       ??_C@_1DA@NHGEKHPO@?$AAC?$AAr?$AAe?$AAa?$AAt?$AAo?$AAr?$AA?5?$AAR?$AAe?$AAv?$AAi?$AAs?$AAi?$AAo?$AAn?$AA?3?$AA?5?$AA0?$AAx?$AA?$CF?$AAX?$AA?6?$AA?$AA@ 0000000000002578     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:00000508       ??_C@_1DK@NBMBLOKO@?$AAC?$AAr?$AAe?$AAa?$AAt?$AAo?$AAr?$AA?5?$AAI?$AAD?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA?$CF?$AAs?$AA?5?$AA?$CI?$AA0?$AAx?$AA?$CF?$AAX?$AA?$CJ?$AA?6?$AA?$AA@ 00000000000025a8     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:00000548       ??_C@_1DK@GFELBGGK@?$AAO?$AAE?$AAM?$AA?5?$AAR?$AAe?$AAv?$AAi?$AAs?$AAi?$AAo?$AAn?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA0?$AAx?$AA?$CF?$AAX?$AA?5?$AA?$CI?$AA?$CF?$AAd?$AA?$CJ?$AA?6?$AA?$AA@ 00000000000025e8     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:00000588       ??_C@_1DK@JHOGLJL@?$AAO?$AAE?$AAM?$AA?5?$AAT?$AAa?$AAb?$AAl?$AAe?$AA?5?$AAI?$AAD?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA?$CF?$AAs?$AA?5?$AA?$CI?$AA0?$AAx?$AA?$CF?$AAX?$AA?$CJ?$AA?6?$AA?$AA@ 0000000000002628     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:000005c8       ??_C@_1DK@GMCHALNN@?$AAO?$AAE?$AAM?$AA?5?$AAI?$AAD?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA?$CF?$AAs?$AA?5?$AA?$CI?$AA0?$AAx?$AA?$CF?$AAX?$AA?$CJ?$AA?6?$AA?$AA@ 0000000000002668     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:00000608       ??_C@_1DK@FPEIMIPP@?$AAC?$AAh?$AAe?$AAc?$AAk?$AAS?$AAu?$AAm?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA0?$AAx?$AA?$CF?$AAX?$AA?5?$AA?$CI?$AA?$CF?$AAd?$AA?$CJ?$AA?6?$AA?$AA@ 00000000000026a8     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:00000648       ??_C@_1DK@KBBKABIB@?$AAR?$AAe?$AAv?$AAi?$AAs?$AAi?$AAo?$AAn?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA0?$AAx?$AA?$CF?$AAX?$AA?5?$AA?$CI?$AA?$CF?$AAd?$AA?$CJ?$AA?6?$AA?$AA@ 00000000000026e8     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:00000688       ??_C@_1DK@OHMPNADJ@?$AAL?$AAe?$AAn?$AAg?$AAt?$AAh?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA0?$AAx?$AA?$CF?$AAX?$AA?5?$AA?$CI?$AA?$CF?$AAd?$AA?$CJ?$AA?6?$AA?$AA@ 0000000000002728     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:000006c8       ??_C@_1CO@BBIPKDFC@?$AAS?$AAi?$AAg?$AAn?$AAa?$AAt?$AAu?$AAr?$AAe?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?5?$AA?3?$AA?5?$AA?$CF?$AAs?$AA?5?$AA?6?$AA?$AA@ 0000000000002768     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:000006f8       ??_C@_1M@OMOAGDNC@?$AA?$CF?$AA0?$AA2?$AAx?$AA?5?$AA?$AA@ 0000000000002798     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:00000704       ??_C@_15OJKDPEFE@?$AA?5?$AA?5?$AA?$AA@ 00000000000027a4     COMPAL_AcpiLib:COMPAL_AcpiLib.obj
+ 0002:00000710       ??_C@_0DK@EOJCOAME@Length?5?$DM?5_gPcd_FixedAtBuild_PcdM@ 00000000000027b0     BaseLib:String.obj
+ 0002:00000750       ??_C@_0CD@BDCLIGHD@?$CI?$CIUINTN?$CJ?5String?5?$CG?50x00000001?$CJ?5?$DN?$DN@ 00000000000027f0     BaseLib:String.obj
+ 0002:00000778       ??_C@_0CD@OOJADBME@q?3?2MdePkg?2Library?2BaseLib?2String@ 0000000000002818     BaseLib:String.obj
+ 0002:000007a0       ??_C@_0BH@MAAHKCPC@String?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 0000000000002840     BaseLib:String.obj
+ 0002:000007b8       ??_C@_0BM@DALBOILC@StrSize?5?$CISecondString?$CJ?5?$CB?$DN?50?$AA@ 0000000000002858     BaseLib:String.obj
+ 0002:000007d8       ??_C@_0BL@JAAMOCAJ@StrSize?5?$CIFirstString?$CJ?5?$CB?$DN?50?$AA@ 0000000000002878     BaseLib:String.obj
+ 0002:000007f8       ??_C@_0DI@MDIKFADO@Length?5?$DM?5_gPcd_FixedAtBuild_PcdM@ 0000000000002898     BaseLib:String.obj
+ 0002:00000830       ??_C@_0N@KGHEHMDL@Divisor?5?$CB?$DN?50?$AA@ 00000000000028d0     BaseLib:DivU64x32.obj
+ 0002:00000840       ??_C@_0EM@DLKNJEFG@q?3?2MdePkg?2Library?2UefiRuntimeSer@ 00000000000028e0     UefiRuntimeServicesTableLib:UefiRuntimeServicesTableLib.obj
+ 0002:00000890       ??_C@_0BE@OBDFIHND@gRT?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 0000000000002930     UefiRuntimeServicesTableLib:UefiRuntimeServicesTableLib.obj
+ 0002:000008a8       ??_C@_0BG@JDKEGFNB@Table?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 0000000000002948     UefiLib:UefiLib.obj
+ 0002:000008c0       ??_C@_0CE@KFLJGPMN@q?3?2MdePkg?2Library?2UefiLib?2UefiLi@ 0000000000002960     UefiLib:UefiLib.obj
+ 0002:000008e8       ??_C@_0BK@PPOBBAMB@TableGuid?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 0000000000002988     UefiLib:UefiLib.obj
+ 0002:00000908       ??_C@_0BH@IACGKAP@Buffer?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 00000000000029a8     UefiLib:UefiLibPrint.obj
+ 0002:00000920       ??_C@_0BI@DIKLKBJC@Console?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 00000000000029c0     UefiLib:UefiLibPrint.obj
+ 0002:00000938       ??_C@_0CD@NJDNMGBE@?$CI?$CIUINTN?$CJ?5Format?5?$CG?50x00000001?$CJ?5?$DN?$DN@ 00000000000029d8     UefiLib:UefiLibPrint.obj
+ 0002:00000960       ??_C@_0CJ@ICOLKBCP@q?3?2MdePkg?2Library?2UefiLib?2UefiLi@ 0000000000002a00     UefiLib:UefiLibPrint.obj
+ 0002:00000990       ??_C@_0BH@LKMBFCBF@Format?5?$CB?$DN?5?$CI?$CIvoid?5?$CK?$CJ?50?$CJ?$AA@ 0000000000002a30     UefiLib:UefiLibPrint.obj
+ 0002:000009b0       ??_C@_0EA@JCDEKIGH@q?3?2MdePkg?2Library?2UefiMemoryAllo@ 0000000000002a50     UefiMemoryAllocationLib:MemoryAllocationLib.obj
+ 0002:000009f0       ??_C@_0CH@KJLBGOBB@?$CI?$CI?$CIUINTN?$CJ?5?$CIFormatString?$CJ?$CJ?5?$CG?50x01@ 0000000000002a90     BasePrintLib:PrintLib.obj
+ 0002:00000a18       ??_C@_0CK@LOLCLJPB@q?3?2MdePkg?2Library?2BasePrintLib?2P@ 0000000000002ab8     BasePrintLib:PrintLib.obj
+ 0002:00000a48       ??_C@_0CI@BGLNHBLM@?$CI?$CI?$CIUINTN?$CJ?5?$CIStartOfBuffer?$CJ?$CJ?5?$CG?50x0@ 0000000000002ae8     BasePrintLib:PrintLib.obj
+ 0002:00000a70       ??_C@_0BB@MFGDFIJM@Compromised?5Data?$AA@ 0000000000002b10     BasePrintLib:PrintLibInternal.obj
+ 0002:00000a88       ??_C@_0BB@KFJAMCOC@Invalid?5Language?$AA@ 0000000000002b28     BasePrintLib:PrintLibInternal.obj
+ 0002:00000aa0       ??_C@_0M@FKGOBENP@End?5of?5File?$AA@ 0000000000002b40     BasePrintLib:PrintLibInternal.obj
+ 0002:00000ab0       ??_C@_0O@GLPDOMCP@Reserved?5?$CI30?$CJ?$AA@ 0000000000002b50     BasePrintLib:PrintLibInternal.obj
+ 0002:00000ac0       ??_C@_0O@NMJOLAMF@Reserved?5?$CI29?$CJ?$AA@ 0000000000002b60     BasePrintLib:PrintLibInternal.obj
+ 0002:00000ad0       ??_C@_0N@JEJDHPO@End?5of?5Media?$AA@ 0000000000002b70     BasePrintLib:PrintLibInternal.obj
+ 0002:00000ae0       ??_C@_09BOMAGJEG@CRC?5Error?$AA@ 0000000000002b80     BasePrintLib:PrintLibInternal.obj
+ 0002:00000af0       ??_C@_0BD@KHMPCIOG@Security?5Violation?$AA@ 0000000000002b90     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b08       ??_C@_0BF@EHOBGFMI@Incompatible?5Version?$AA@ 0000000000002ba8     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b20       ??_C@_0P@NCJHBCLM@Protocol?5Error?$AA@ 0000000000002bc0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b30       ??_C@_0L@DJKNJKHM@TFTP?5Error?$AA@ 0000000000002bd0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b40       ??_C@_0L@LKIFCMNO@ICMP?5Error?$AA@ 0000000000002be0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b50       ??_C@_07LCKDCBKK@Aborted?$AA@ 0000000000002bf0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b58       ??_C@_0BA@IGIBFFPH@Already?5started?$AA@ 0000000000002bf8     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b68       ??_C@_0M@DCJFAFHJ@Not?5started?$AA@ 0000000000002c08     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b78       ??_C@_08PAFJCNGP@Time?5out?$AA@ 0000000000002c18     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b88       ??_C@_0L@IFPBNFC@No?5mapping?$AA@ 0000000000002c28     BasePrintLib:PrintLibInternal.obj
+ 0002:00000b98       ??_C@_0M@ENKCBFEP@No?5Response?$AA@ 0000000000002c38     BasePrintLib:PrintLibInternal.obj
+ 0002:00000ba8       ??_C@_0O@NFHOBIDO@Access?5Denied?$AA@ 0000000000002c48     BasePrintLib:PrintLibInternal.obj
+ 0002:00000bb8       ??_C@_09CFCBFJND@Not?5Found?$AA@ 0000000000002c58     BasePrintLib:PrintLibInternal.obj
+ 0002:00000bc8       ??_C@_0O@JNCJKCCD@Media?5changed?$AA@ 0000000000002c68     BasePrintLib:PrintLibInternal.obj
+ 0002:00000bd8       ??_C@_08KEGAJDNN@No?5Media?$AA@ 0000000000002c78     BasePrintLib:PrintLibInternal.obj
+ 0002:00000be8       ??_C@_0M@HDLEPOFA@Volume?5Full?$AA@ 0000000000002c88     BasePrintLib:PrintLibInternal.obj
+ 0002:00000bf8       ??_C@_0P@EIOJGIF@Volume?5Corrupt?$AA@ 0000000000002c98     BasePrintLib:PrintLibInternal.obj
+ 0002:00000c08       ??_C@_0BB@GOILNEAA@Out?5of?5Resources?$AA@ 0000000000002ca8     BasePrintLib:PrintLibInternal.obj
+ 0002:00000c20       ??_C@_0BA@LNEDDFNB@Write?5Protected?$AA@ 0000000000002cc0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000c30       ??_C@_0N@HHEABDHO@Device?5Error?$AA@ 0000000000002cd0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000c40       ??_C@_09NKFGCIPN@Not?5Ready?$AA@ 0000000000002ce0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000c50       ??_C@_0BB@EGELJFOB@Buffer?5Too?5Small?$AA@ 0000000000002cf0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000c68       ??_C@_0BA@FLNMPMCF@Bad?5Buffer?5Size?$AA@ 0000000000002d08     BasePrintLib:PrintLibInternal.obj
+ 0002:00000c78       ??_C@_0M@BEECMOIL@Unsupported?$AA@ 0000000000002d18     BasePrintLib:PrintLibInternal.obj
+ 0002:00000c88       ??_C@_0BC@HOFHKGJN@Invalid?5Parameter?$AA@ 0000000000002d28     BasePrintLib:PrintLibInternal.obj
+ 0002:00000ca0       ??_C@_0L@PLPBEPPC@Load?5Error?$AA@ 0000000000002d40     BasePrintLib:PrintLibInternal.obj
+ 0002:00000cb0       ??_C@_0BD@IFJNJCCO@Warning?5Stale?5Data?$AA@ 0000000000002d50     BasePrintLib:PrintLibInternal.obj
+ 0002:00000cc8       ??_C@_0BJ@ODIPDGHB@Warning?5Buffer?5Too?5Small?$AA@ 0000000000002d68     BasePrintLib:PrintLibInternal.obj
+ 0002:00000ce8       ??_C@_0BG@ECIJMOED@Warning?5Write?5Failure?$AA@ 0000000000002d88     BasePrintLib:PrintLibInternal.obj
+ 0002:00000d00       ??_C@_0BH@GKKCJEPJ@Warning?5Delete?5Failure?$AA@ 0000000000002da0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000d18       ??_C@_0BG@CFJMNNJK@Warning?5Unknown?5Glyph?$AA@ 0000000000002db8     BasePrintLib:PrintLibInternal.obj
+ 0002:00000d30       ??_C@_07PBILKAFL@Success?$AA@ 0000000000002dd0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000d38       mHexStr                    0000000000002dd8     BasePrintLib:PrintLibInternal.obj
+ 0002:00000d50       mStatusString              0000000000002df0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000e88       ??_C@_0DC@CHCEMEEB@q?3?2MdePkg?2Library?2BasePrintLib?2P@ 0000000000002f28     BasePrintLib:PrintLibInternal.obj
+ 0002:00000ec0       ??_C@_0EG@NFDMKACK@?$CI?$CI?$CIFlags?5?$CG?50x00000040?$CJ?5?$CB?$DN?50?$CJ?$CJ?5?$HM?$HM@ 0000000000002f60     BasePrintLib:PrintLibInternal.obj
+ 0002:00000f10       ??_C@_0EM@FPGGOFNC@?$CI?$CI?$CIFlags?5?$CG?50x00000040?$CJ?5?$DN?$DN?50?$CJ?$CJ?5?$HM?$HM@ 0000000000002fb0     BasePrintLib:PrintLibInternal.obj
+ 0002:00000f5c       ??_C@_01LIIJDEN@?$AN?$AA@  0000000000002ffc     BasePrintLib:PrintLibInternal.obj
+ 0002:00000f60       ??_C@_04JIMNDDED@?$CF08X?$AA@ 0000000000003000     BasePrintLib:PrintLibInternal.obj
+ 0002:00000f68       ??_C@_0O@MLOLIMFM@?$DMnull?5string?$DO?$AA@ 0000000000003008     BasePrintLib:PrintLibInternal.obj
+ 0002:00000f78       ??_C@_0BK@FCPKCIDD@?$CF02d?1?$CF02d?1?$CF04d?5?5?$CF02d?3?$CF02d?$AA@ 0000000000003018     BasePrintLib:PrintLibInternal.obj
+ 0002:00000f98       ??_C@_0M@LHGBCIKM@?$DMnull?5time?$DO?$AA@ 0000000000003038     BasePrintLib:PrintLibInternal.obj
+ 0002:00000fa8       ??_C@_0DB@PMLHLBMO@?$CF08x?9?$CF04x?9?$CF04x?9?$CF02x?$CF02x?9?$CF02x?$CF02x@ 0000000000003048     BasePrintLib:PrintLibInternal.obj
+ 0002:00000fe0       ??_C@_0M@BJJDNPHK@?$DMnull?5guid?$DO?$AA@ 0000000000003080     BasePrintLib:PrintLibInternal.obj
+ 0002:00000fec       ??_C@_02PCIJFNDE@?$AN?6?$AA@ 000000000000308c     BasePrintLib:PrintLibInternal.obj
+ 0002:00000ff0       ??_C@_0BL@BFEFANFD@AsciiStrSize?5?$CIFormat?$CJ?5?$CB?$DN?50?$AA@ 0000000000003090     BasePrintLib:PrintLibInternal.obj
+ 0002:00001010       ??_C@_0CB@NIHAJGJE@StrSize?5?$CI?$CICHAR16?5?$CK?$CJ?5Format?$CJ?5?$CB?$DN?50@ 00000000000030b0     BasePrintLib:PrintLibInternal.obj
+ 0002:00001038       ??_C@_0CG@MHAECJIA@q?3?2MdePkg?2Library?2BaseLib?2Unalig@ 00000000000030d8     BaseLib:Unaligned.obj
+ 0002:00001060       ??_C@_0CP@CPEPIGGJ@q?3?2MdePkg?2Library?2BaseLib?2DivU64@ 0000000000003100     BaseLib:DivU64x32Remainder.obj
+ 0002:00001090       gImageHandle               0000000000003130     UefiBootServicesTableLib:UefiBootServicesTableLib.obj
+ 0002:00001098       gST                        0000000000003138     UefiBootServicesTableLib:UefiBootServicesTableLib.obj
+ 0002:000010a0       gBS                        0000000000003140     UefiBootServicesTableLib:UefiBootServicesTableLib.obj
+ 0002:000010a8       gRT                        0000000000003148     UefiRuntimeServicesTableLib:UefiRuntimeServicesTableLib.obj
+
+ entry point at        0001:00000000
+
+ Static symbols
+

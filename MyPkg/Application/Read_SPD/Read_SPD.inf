@@ -1,0 +1,66 @@
+# * (C) Copyright 2011-2020 Compal Electronics, Inc.
+# *
+# * This software is the property of Compal Electronics, Inc.
+# * You have to accept the terms in the license file before use.
+# *
+# * Copyright 2011-2020 Compal Electronics, Inc.. All rights reserved.
+#
+# By installing or using this software or any portion thereof, you ("You") agrees to be bound by the following terms of use ("Terms of Use").
+# This software, and any portion thereof, is referred to herein as the "Software."
+#
+# USE OF SOFTWARE.  This software is the property of Compal Electronics, Inc. (Compal) and is made available by Compal to You, and may be used only by You for personal or project evaluation.
+#
+# RESTRICTIONS.  You shall not claim the ownership of the Software and shall not sell the Software. The software shall be distributed as pre-installed software incorporated in the devices manufactured by Compal only, and shall not be distributed separately via internet or any other medium.
+#
+# INDEMNITY.  You agree to hold harmless and indemnify Compal and Compal!|s subsidiaries, affiliates, officers, agents, and employees from and against any claim, suit, or action arising from or in any way related to Your use of the Software or Your violation of these Terms of Use, including any liability or expense arising from all claims, losses, damages, suits, judgments, litigation costs and attorneys' fees, of every kind and nature.
+# In such a case, Compal will provide You with written notices of such claim, suit, or action.
+#
+# DISCLAIMER.  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+# OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = Read_SPD
+  FILE_GUID                      = cbddc42a-b1fd-4f45-abc2-6a4864cd2515
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = Main
+
+#
+# The following information is for reference only and not required by the build tools.
+#
+#  VALID_ARCHITECTURES           = IA32 X64 IPF EBC
+#
+
+[Sources]  
+   Read_SPD.c 
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MyPkg/MyPkg.dec
+  ShellPkg/ShellPkg.dec
+[LibraryClasses]
+  BaseMemoryLib
+  
+  UefiApplicationEntryPoint
+  UefiLib
+  BaseLib
+  PrintLib
+  MemoryAllocationLib
+  COMPAL_IOLib
+
+[Protocols] 
+[FeaturePcd]
+[Pcd.common]
+[Guids]
+ 
+[BuildOptions]
+  #MSFT:Debug_*_X64_CC_FLAGS ==  /nologo /c /WX /GS- /W4 /Gs32768 /D UNICODE /O1ib2 /GL  /EHs-c- /GR- /GF /Gy /Zi /Gm /D EFI_SPECIFICATION_VERSION=0x0002000A /D TIANO_RELEASE_VERSION=0x00080006 /FAs /Oi-
+  #MSFT:*_*_*_CC_FLAGS ==  /nologo /c /WX /GS- /W4 /Gs32768 /D UNICODE /O1ib2 /GL  /EHs-c- /GR- /GF /Gy /Zi /Gm /D EFI_SPECIFICATION_VERSION=0x0002000A /D TIANO_RELEASE_VERSION=0x00080006 /FAs /Oi-
+  #MSFT:*_*_*_CC_FLAGS =   /wd4804 
+  #MSFT:Debug_*_IA32_CC_FLAGS = 
+  #MSFT:Debug_*_X64_CC_FLAGS = 
+  #MSFT:Release_*_IA32_CC_FLAGS = 
+  #MSFT:Release_*_IA32_CC_FLAGS = 
+  #MSFT:Release_*_IA32_DLINK_FLAGS = 
+  #GCC:Release_*_IA32_CC_FLAGS = 
