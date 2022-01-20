@@ -66,11 +66,13 @@
   HobLib|MdePkg/Library/DxeHobLib/DxeHobLib.inf
   ShellLib|ShellPkg/Library/UefiShellLib/UefiShellLib.inf
   TimerLib|MdePkg/Library/BaseTimerLibNullTemplate/BaseTimerLibNullTemplate.inf
+
   COMPAL_CPUIDLib|MyPkg/Application/Library/COMPAL_CPUIDLib/COMPAL_CPUIDLib.inf
   COMPAL_IOLib|MyPkg/Application/Library/COMPAL_IOLib/COMPAL_IOLib.inf
   COMPAL_MSRLib|MyPkg/Application/Library/COMPAL_MSRLib/COMPAL_MSRLib.inf
   COMPAL_StringLib|MyPkg/Application/Library/COMPAL_StringLib/COMPAL_StringLib.inf
   COMPAL_AcpiLib|MyPkg/Application/Library/COMPAL_AcpiLib/COMPAL_AcpiLib.inf
+  COMPAL_SmbiosLib|MyPkg/Application/Library/COMPAL_SmbiosLib/COMPAL_SmbiosLib.inf
 
 
   UefiShellDebug1CommandsLib|ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib.inf
@@ -136,12 +138,13 @@
 
 ####SMBUS_TOOLS###################################################
     MyPkg/Application/Read_SPD/Read_SPD.inf
-
+####SMBIOS_TOOLS###################################################
+    MyPkg/Application/SMBIOS/SMBIOS.inf
 ####EDID_TOOLS###################################################
     MyPkg/Application/Read_EDID/Read_EDID.inf
     MyPkg/Application/Read_EDID_Str/Read_EDID_Str.inf
 
-####EC_cmd_TOOLS###################################################
+####EC_cmd_TOOLS##################################################
     MyPkg/Application/EC_cmd_62_66_RtcWake/EC_cmd_62_66_RtcWake.inf
     MyPkg/Application/EC_cmd/EC_cmd.inf
     MyPkg/Application/EEPROM/EEPROM.inf

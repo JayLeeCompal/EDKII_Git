@@ -29,6 +29,12 @@ UINT8
 EFIAPI
 StrToHex8(IN CONST CHAR16 * String);
 
+VOID
+EFIAPI
+AsciiToUnicodeSize( CHAR8 *String,
+                    UINT8 length,
+                    CHAR16 *UniString,
+                    BOOLEAN Quote );
 
 #endif
 
