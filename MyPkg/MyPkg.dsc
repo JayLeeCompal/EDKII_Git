@@ -136,12 +136,13 @@
 
 ####SMBUS_TOOLS###################################################
     MyPkg/Application/Read_SPD/Read_SPD.inf
-
+####SMBIOS_TOOLS###################################################
+    MyPkg/Application/SMBIOS/SMBIOS.inf
 ####EDID_TOOLS###################################################
     MyPkg/Application/Read_EDID/Read_EDID.inf
     MyPkg/Application/Read_EDID_Str/Read_EDID_Str.inf
 
-####EC_cmd_TOOLS###################################################
+####EC_cmd_TOOLS##################################################
     MyPkg/Application/EC_cmd_62_66_RtcWake/EC_cmd_62_66_RtcWake.inf
     MyPkg/Application/EC_cmd/EC_cmd.inf
     MyPkg/Application/EEPROM/EEPROM.inf
