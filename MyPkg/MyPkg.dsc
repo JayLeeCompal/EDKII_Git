@@ -136,7 +136,8 @@
 
 ####SMBUS_TOOLS###################################################
     MyPkg/Application/Read_SPD/Read_SPD.inf
-
+####SMBIOS_TOOLS###################################################
+    MyPkg/Application/SMBIOS/SMBIOS.inf
 ####EDID_TOOLS###################################################
     MyPkg/Application/Read_EDID/Read_EDID.inf
     MyPkg/Application/Read_EDID_Str/Read_EDID_Str.inf
