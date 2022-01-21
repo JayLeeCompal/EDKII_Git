@@ -21,7 +21,7 @@
 [Defines]
   INF_VERSION                    = 0x00010005
   BASE_NAME                      = SMBIOS
-  FILE_GUID                      = cbddc42a-b1fd-4f45-abc2-6a4864cd2515
+  FILE_GUID                      = 3887abdf-699b-42f1-9c55-ade0d3a11411
   MODULE_TYPE                    = UEFI_APPLICATION
   VERSION_STRING                 = 1.0
   ENTRY_POINT                    = UefiMain
@@ -48,7 +48,7 @@
   PrintLib
   MemoryAllocationLib
   UefiApplicationEntryPoint
-
+  COMPAL_SmbiosLib
   
 [Protocols]
 [FeaturePcd]

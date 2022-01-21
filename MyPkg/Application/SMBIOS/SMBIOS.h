@@ -11,3 +11,4 @@
 #include <Protocol/EfiShellParameters.h>
 #include <Guid/SmBios.h>
 
+#include <COMPAL_SmbiosLib.h>
