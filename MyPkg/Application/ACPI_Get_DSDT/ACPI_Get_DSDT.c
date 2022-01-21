@@ -37,14 +37,14 @@ Acpi_main (
   //2. Find XSDT
   //
   Xsdt = (EFI_ACPI_DESCRIPTION_HEADER*)Rsdp->XsdtAddress;
-  Ptr = (UINT8*)Xsdt;
+  Ptr  = (UINT8*)Xsdt;
 
   //
   //3.Find FACP Entry
   //
   Entry = (UINT64*) & Xsdt[1];
-  Ptr=(UINT8*)(*Entry);
-  Fadt=(EFI_ACPI_5_0_FIXED_ACPI_DESCRIPTION_TABLE*)Ptr;
+  Ptr   = (UINT8*)(*Entry);
+  Fadt  = (EFI_ACPI_5_0_FIXED_ACPI_DESCRIPTION_TABLE*)Ptr;
 
 
 
@@ -88,12 +88,12 @@ Acpi_main (
      //
      else if ( !StrCmp(Argv[1], L"--xsdt") || !StrCmp(Argv[1], L"-x") )
        {
-         count=((Xsdt->Length) - sizeof(EFI_ACPI_DESCRIPTION_HEADER))/8;
+         count = ((Xsdt->Length) - sizeof(EFI_ACPI_DESCRIPTION_HEADER))/8;
          Print(L"Entry    Signature       Address\n");
          for(Index = 0; Index < count; Entry++,Index++)
            {
-            Ptr=(UINT8*)(*Entry);       
-            Fadt=(EFI_ACPI_5_0_FIXED_ACPI_DESCRIPTION_TABLE*)Ptr;
+            Ptr  = (UINT8*)(*Entry);       
+            Fadt = (EFI_ACPI_5_0_FIXED_ACPI_DESCRIPTION_TABLE*)Ptr;
             //display Entry number   Signature   Address
             AsciiToUnicodeSize((CHAR8 *)&(Fadt->Header.Signature), 4, Buffer, TRUE);
             Print(L" %02d        %s      0x%X\n",Index,Buffer,*Entry);
