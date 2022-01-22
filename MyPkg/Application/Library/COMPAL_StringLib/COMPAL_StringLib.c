@@ -109,4 +109,23 @@ StrToHex8(
   return (UINT8)Result; // byte 0x0~0xFF
 }
 
+VOID
+EFIAPI
+AsciiToUnicodeSize( CHAR8 *String,
+                    UINT8 length,
+                    CHAR16 *UniString,
+                    BOOLEAN Quote )
+{
+    int len = length;
+ 
+    if (Quote)
+        *(UniString++) = L'"';
+    while (*String != '\0' && len > 0) {
+        *(UniString++) = (CHAR16) *(String++);
+        len--;
+    }
+    if (Quote)
+        *(UniString++) = L'"';
+    *UniString = '\0';
+}
 
