@@ -38,26 +38,28 @@
 [Packages]
   MdePkg/MdePkg.dec
   MyPkg/MyPkg.dec
-  DuetPkg/DuetPkg.dec
+  MdeModulePkg/MdeModulePkg.dec
   ShellPkg/ShellPkg.dec
 
 [LibraryClasses]
-  BaseMemoryLib
   UefiLib
-  BaseLib
   PrintLib
-  MemoryAllocationLib
+  PcdLib
+  ShellCEntryLib
   UefiApplicationEntryPoint
   COMPAL_SmbiosLib
   
 [Protocols]
+  gEfiSmbiosProtocolGuid       
+
+[Depex]
+  gEfiSmbiosProtocolGuid
 [FeaturePcd]
 [Pcd.common]
 
 [Guids]
-
+  gEfiGlobalVariableGuid
   gEfiSmbiosTableGuid
-  gEfiSmbios3TableGuid
 
 [BuildOptions]
   #MSFT:Debug_*_X64_CC_FLAGS ==  /nologo /c /WX /GS- /W4 /Gs32768 /D UNICODE /O1ib2 /GL  /EHs-c- /GR- /GF /Gy /Zi /Gm /D EFI_SPECIFICATION_VERSION=0x0002000A /D TIANO_RELEASE_VERSION=0x00080006 /FAs /Oi-

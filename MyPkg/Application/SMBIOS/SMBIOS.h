@@ -9,6 +9,8 @@
 
 #include <Protocol/LoadedImage.h>
 #include <Protocol/EfiShellParameters.h>
+#include <Protocol/SmBios.h>
 #include <Guid/SmBios.h>
 
 #include <COMPAL_SmbiosLib.h>
+
