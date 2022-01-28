@@ -393,7 +393,7 @@ PrintSmbiosType22(IN SMBIOS_TABLE_TYPE22 *Type22,IN SMBIOS_STRUCTURE_POINTER mSm
     Print(L"SBDS Device Chemistry      : %s\n",ptr);//String 7
     FreePool(ptr);
     
-    Print(L"Device Chemistry           : %d (Undefined)\n",Type22->DeviceChemistry);
+    Print(L"Device Chemistry           : %d (Zinc air)\n",Type22->DeviceChemistry);
     Print(L"Device Capacity            : %X\n",Type22->DeviceCapacity);
     Print(L"Design Voltage             : %X (mV)\n",Type22->DesignVoltage);
     Print(L"Maximum Err Battery Data   : %X\n",Type22->MaximumErrorInBatteryData);
