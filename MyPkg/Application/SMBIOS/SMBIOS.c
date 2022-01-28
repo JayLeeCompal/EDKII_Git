@@ -1,5 +1,4 @@
 #include "SMBIOS.h"
-
 VOID
 EFIAPI
 Usage( void )
@@ -24,25 +23,40 @@ Smbios_main (
   IN CHAR16 **Argv
 )
 {
-  EFI_STATUS Status=EFI_SUCCESS;
-  EFI_GUID  SMBIOSTableGuid = SMBIOS_TABLE_GUID;
-  SMBIOS_TABLE_ENTRY_POINT  *SmbiosTable=NULL;
-  SMBIOS_STRUCTURE_POINTER  *SmbiosStruct=NULL;
-  UINTN                      Type;
-  CHAR8                     *str;
-  CHAR16                    *ptr;
   
-  
-  //
-  //1. Find SMBIOS Entry
-  //
-  Status = EfiGetSystemConfigurationTable(&SMBIOSTableGuid, (VOID**)&SmbiosTable);
-  (CompareMem (SmbiosTable->AnchorString, "_SM_", 4) || Status)? Print(L"Can't find Smbios Table\n"):Print(L"Status : %d\n",Status);
 
-  SmbiosStruct->Raw = (UINT8*)(UINTN)SmbiosTable->TableAddress;
+  EFI_STATUS  Status = EFI_SUCCESS;
+  EFI_GUID  SMBIOSTableGuid = SMBIOS_TABLE_GUID;
+ 
+  EFI_SMBIOS_PROTOCOL           *Smbios;
+  EFI_SMBIOS_HANDLE             SmbiosHandle;
+  EFI_SMBIOS_TABLE_HEADER       *Header;
+
+  SMBIOS_TABLE_TYPE0            *Type0;
+  SMBIOS_TABLE_TYPE1            *Type1;
+  SMBIOS_TABLE_TYPE2            *Type2;
+  SMBIOS_TABLE_TYPE3            *Type3;
+  SMBIOS_TABLE_TYPE17           *Type17;
+  SMBIOS_TABLE_TYPE22           *Type22;
+  UINTN                          Type;
+
+  UINT16  	 Handle;
+ 	UINTN   	 Index;
+ 	UINT16  	 Length;
+ 	UINT8   	 *Buffer;
+  
+  
   //
-  // Display Smbios Entry Ponint Information
+  //Find SMBIOS Entry
   //
+  Status = EfiGetSystemConfigurationTable(&SMBIOSTableGuid, (VOID**)&mSmbiosTable);
+  (CompareMem (mSmbiosTable->AnchorString, "_SM_", 4) || Status)? Print(L"Can't find Smbios Table\n"):Print(L"Entry Status : %d\n",Status);
+  //
+  //Initialization  Struct
+  //
+  mSmbiosStruct.Raw  = (UINT8 *) (UINTN) (mSmbiosTable->TableAddress);
+  
+ 
   if ( Argc < 2 || Argc > 3 )
     {
      Usage();
@@ -51,54 +65,185 @@ Smbios_main (
     {
      if ( !StrCmp(Argv[1], L"-s") && Argc == 2)
       {
-       PrintSmbiosEntryInfo(SmbiosTable);
+       
+       PrintSmbiosEntryInfo(mSmbiosTable);
        
       }
-
      else if ( !StrCmp(Argv[1], L"-t") && Argc==3 )
       {
+       Status = gBS->LocateProtocol (
+                  &gEfiSmbiosProtocolGuid,
+                  NULL,
+                  (VOID**)&Smbios
+                  );
+       (Status)? Print(L"Can't find Smbios Table\n"):Print(L"Type Status : %d\n",Status);
+
+       SmbiosHandle = SMBIOS_HANDLE_PI_RESERVED;
+       Status = Smbios->GetNext (Smbios, &SmbiosHandle, NULL, &Header, NULL);
+       
        Type = StrDecimalToUintn(Argv[2]);
      
        switch(Type)
          {
           case 0:
-            //PrintSmbiosType0(SmbiosStruct->Type0);
-            str=LibGetSmbiosString(&SmbiosStruct,1);
-            ptr=ASCII_to_UCS2(str,StrLen(str));
-            Print(L"%s",ptr);
-            FreePool(ptr);
-            break;
+            while (!EFI_ERROR(Status)) 
+              {
+                if(Header->Type == 0)
+                  {
+                    Type0 = (SMBIOS_TABLE_TYPE0*)Header;
+                    Handle  = INVALID_HANDLE;
+                    LibGetSmbiosStructure (&Handle, NULL, NULL);
+                    for (Index = 0; Index < mSmbiosTable->NumberOfSmbiosStructures; Index++)
+        	            {
+          	           if ( (Handle == INVALID_HANDLE) ||\
+                            (LibGetSmbiosStructure (&Handle, &Buffer, &Length) != DMI_SUCCESS)
+                          ) {break;}
+                       mSmbiosStruct.Raw = Buffer;
+                       if (mSmbiosStruct.Hdr->Type == 0) 
+                          {
+                           Type0 = (SMBIOS_TABLE_TYPE0*)Header;
+                           PrintSmbiosType0(Type0,mSmbiosStruct);
+                          }
+                       }
+                  }
+                Status = Smbios->GetNext (Smbios, &SmbiosHandle, NULL, &Header, NULL);
+              }
+             break;
 
           case 1:
-            PrintSmbiosType1(SmbiosStruct->Type1);
-            break;
-
+            while (!EFI_ERROR(Status)) 
+              {
+                if(Header->Type == 1)
+                  {
+                    Type1 = (SMBIOS_TABLE_TYPE1*)Header;
+                    Handle  = INVALID_HANDLE;
+                    LibGetSmbiosStructure (&Handle, NULL, NULL);
+                    for (Index = 0; Index < mSmbiosTable->NumberOfSmbiosStructures; Index++)
+        	            {
+          	           if ( (Handle == INVALID_HANDLE) ||\
+                            (LibGetSmbiosStructure (&Handle, &Buffer, &Length) != DMI_SUCCESS)
+                          ) {break;}
+                       mSmbiosStruct.Raw = Buffer;
+                       if (mSmbiosStruct.Hdr->Type == 1) 
+                          {
+                           Type1 = (SMBIOS_TABLE_TYPE1*)Header;
+                           PrintSmbiosType1(Type1,mSmbiosStruct);
+                          }
+                       }
+                  }
+                Status = Smbios->GetNext (Smbios, &SmbiosHandle, NULL, &Header, NULL);
+              }
+             break;
           case 2:
-            PrintSmbiosType2(SmbiosStruct->Type2);
-            break;
+            while (!EFI_ERROR(Status)) 
+              {
+                if(Header->Type == 2)
+                  {
+                    Type2 = (SMBIOS_TABLE_TYPE2*)Header;
+                    Handle  = INVALID_HANDLE;
+                    LibGetSmbiosStructure (&Handle, NULL, NULL);
+                    for (Index = 0; Index < mSmbiosTable->NumberOfSmbiosStructures; Index++)
+        	            {
+          	           if ( (Handle == INVALID_HANDLE) ||\
+                            (LibGetSmbiosStructure (&Handle, &Buffer, &Length) != DMI_SUCCESS)
+                          ) {break;}
+                       mSmbiosStruct.Raw = Buffer;
+                       if (mSmbiosStruct.Hdr->Type == 2) 
+                          {
+                           Type2 = (SMBIOS_TABLE_TYPE2*)Header;
+                           PrintSmbiosType2(Type2,mSmbiosStruct);
+                          }
+                       }
+                  }
+                Status = Smbios->GetNext (Smbios, &SmbiosHandle, NULL, &Header, NULL);
+              }
+             break;
 
           case 3:
-            PrintSmbiosType3(SmbiosStruct->Type3);
-            break;
-
+            while (!EFI_ERROR(Status)) 
+              {
+                if(Header->Type == 3)
+                  {
+                    Type3 = (SMBIOS_TABLE_TYPE3*)Header;
+                    Handle  = INVALID_HANDLE;
+                    LibGetSmbiosStructure (&Handle, NULL, NULL);
+                    for (Index = 0; Index < mSmbiosTable->NumberOfSmbiosStructures; Index++)
+        	            {
+          	           if ( (Handle == INVALID_HANDLE) ||\
+                            (LibGetSmbiosStructure (&Handle, &Buffer, &Length) != DMI_SUCCESS)
+                          ) {break;}
+                       mSmbiosStruct.Raw = Buffer;
+                       if (mSmbiosStruct.Hdr->Type == 3) 
+                          {
+                           Type3 = (SMBIOS_TABLE_TYPE3*)Header;
+                           PrintSmbiosType3(Type3,mSmbiosStruct);
+                          }
+                       }
+                  }
+                Status = Smbios->GetNext (Smbios, &SmbiosHandle, NULL, &Header, NULL);
+              }
+             break;
+          
           case 17:
-            PrintSmbiosType17(SmbiosStruct->Type17);
-            break;
+            while (!EFI_ERROR(Status)) 
+              {
+                if(Header->Type == 17)
+                  {
+                    Type17 = (SMBIOS_TABLE_TYPE17*)Header;
+                    Handle  = INVALID_HANDLE;
+                    LibGetSmbiosStructure (&Handle, NULL, NULL);
+                    for (Index = 0; Index < mSmbiosTable->NumberOfSmbiosStructures; Index++)
+        	            {
+          	           if ( (Handle == INVALID_HANDLE) ||\
+                            (LibGetSmbiosStructure (&Handle, &Buffer, &Length) != DMI_SUCCESS)
+                          ) {break;}
+                       mSmbiosStruct.Raw = Buffer;
+                       if (mSmbiosStruct.Hdr->Type == 17) 
+                          {
+                           Type17 = (SMBIOS_TABLE_TYPE17*)Header;
+                           PrintSmbiosType17(Type17,mSmbiosStruct);
+                          }
+                       }
+                  }
+                Status = Smbios->GetNext (Smbios, &SmbiosHandle, NULL, &Header, NULL);
+              }
+             break;
 
           case 22:
-            PrintSmbiosType22(SmbiosStruct->Type22);
-            break;
+            while (!EFI_ERROR(Status)) 
+              {
+                if(Header->Type == 22)
+                  {
+                    Type22 = (SMBIOS_TABLE_TYPE22*)Header;
+                    Handle  = INVALID_HANDLE;
+                    LibGetSmbiosStructure (&Handle, NULL, NULL);
+                    for (Index = 0; Index < mSmbiosTable->NumberOfSmbiosStructures; Index++)
+        	            {
+          	           if ( (Handle == INVALID_HANDLE) ||\
+                            (LibGetSmbiosStructure (&Handle, &Buffer, &Length) != DMI_SUCCESS)
+                          ) {break;}
+                       mSmbiosStruct.Raw = Buffer;
+                       if (mSmbiosStruct.Hdr->Type == 22) 
+                          {
+                           Type22 = (SMBIOS_TABLE_TYPE22*)Header;
+                           PrintSmbiosType22(Type22,mSmbiosStruct);
+                          }
+                       }
+                  }
+                Status = Smbios->GetNext (Smbios, &SmbiosHandle, NULL, &Header, NULL);
+              }
+             break;
          
           default:
             Usage();
             break;
-         }    
-       }
+        }
+     }
      else
       {
        Usage();
       }
-    } 
+   }
   return Status; 
 }
 

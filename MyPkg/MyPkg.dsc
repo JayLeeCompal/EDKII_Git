@@ -44,6 +44,8 @@
   #
   # Common Libraries
   #
+  ########################
+  #MdePkg
   BaseLib|MdePkg/Library/BaseLib/BaseLib.inf
   BaseMemoryLib|MdePkg/Library/BaseMemoryLib/BaseMemoryLib.inf
   UefiLib|MdePkg/Library/UefiLib/UefiLib.inf
@@ -60,22 +62,30 @@
   PciCf8Lib|MdePkg/Library/BasePciCf8Lib/BasePciCf8Lib.inf        #Low-level Pci Library
   SynchronizationLib|MdePkg/Library/BaseSynchronizationLib/BaseSynchronizationLib.inf
   UefiRuntimeLib|MdePkg/Library/UefiRuntimeLib/UefiRuntimeLib.inf
-  HiiLib|MdeModulePkg/Library/UefiHiiLib/UefiHiiLib.inf
-  UefiHiiServicesLib|MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.inf
   PerformanceLib|MdeModulePkg/Library/DxePerformanceLib/DxePerformanceLib.inf
   HobLib|MdePkg/Library/DxeHobLib/DxeHobLib.inf
-  ShellLib|ShellPkg/Library/UefiShellLib/UefiShellLib.inf
   TimerLib|MdePkg/Library/BaseTimerLibNullTemplate/BaseTimerLibNullTemplate.inf
-
+  #
+  ########################
+  #MdeModulePkg
+  UefiHiiServicesLib|MdeModulePkg/Library/UefiHiiServicesLib/UefiHiiServicesLib.inf
+  HiiLib|MdeModulePkg/Library/UefiHiiLib/UefiHiiLib.inf
+  #
+  ########################
+  #ShellPkg
+  ShellLib|ShellPkg/Library/UefiShellLib/UefiShellLib.inf
+  
+  #
+  ########################
+  #MyPkg
   COMPAL_CPUIDLib|MyPkg/Application/Library/COMPAL_CPUIDLib/COMPAL_CPUIDLib.inf
   COMPAL_IOLib|MyPkg/Application/Library/COMPAL_IOLib/COMPAL_IOLib.inf
   COMPAL_MSRLib|MyPkg/Application/Library/COMPAL_MSRLib/COMPAL_MSRLib.inf
   COMPAL_StringLib|MyPkg/Application/Library/COMPAL_StringLib/COMPAL_StringLib.inf
   COMPAL_AcpiLib|MyPkg/Application/Library/COMPAL_AcpiLib/COMPAL_AcpiLib.inf
   COMPAL_SmbiosLib|MyPkg/Application/Library/COMPAL_SmbiosLib/COMPAL_SmbiosLib.inf
+  
 
-
-  UefiShellDebug1CommandsLib|ShellPkg/Library/UefiShellDebug1CommandsLib/UefiShellDebug1CommandsLib.inf
 [LibraryClasses.IA32]
   # To run in an emulation environment, such as Nt32Pkg, comment out the TimerLib
   # description above and un-comment the line below.
