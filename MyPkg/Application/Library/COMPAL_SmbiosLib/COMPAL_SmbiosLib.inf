@@ -32,12 +32,28 @@
 #
 
 [Sources]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99a4263664a676da44b0baab49bc40b83ac8f715
  COMPAL_SmbiosLib.c
  
 [Packages]
   MdePkg/MdePkg.dec
   MyPkg/MyPkg.dec
   ShellPkg/ShellPkg.dec
+<<<<<<< HEAD
+=======
+=======
+ COMPAL_SmbiosLib.c 
+
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MyPkg/MyPkg.dec
+  
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
+>>>>>>> 99a4263664a676da44b0baab49bc40b83ac8f715
 [LibraryClasses]
   BaseMemoryLib
   UefiApplicationEntryPoint
@@ -46,7 +62,14 @@
   PrintLib
   MemoryAllocationLib
   COMPAL_StringLib
+<<<<<<< HEAD
   ShellCEntryLib
+=======
+<<<<<<< HEAD
+  ShellCEntryLib
+=======
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
+>>>>>>> 99a4263664a676da44b0baab49bc40b83ac8f715
 
 [Ppis]
   gEfiSecPlatformInformationPpiGuid             ## CONSUMES

@@ -65,6 +65,10 @@
   PerformanceLib|MdeModulePkg/Library/DxePerformanceLib/DxePerformanceLib.inf
   HobLib|MdePkg/Library/DxeHobLib/DxeHobLib.inf
   TimerLib|MdePkg/Library/BaseTimerLibNullTemplate/BaseTimerLibNullTemplate.inf
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 99a4263664a676da44b0baab49bc40b83ac8f715
   #
   ########################
   #MdeModulePkg
@@ -78,13 +82,26 @@
   #
   ########################
   #MyPkg
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
+>>>>>>> 99a4263664a676da44b0baab49bc40b83ac8f715
   COMPAL_CPUIDLib|MyPkg/Application/Library/COMPAL_CPUIDLib/COMPAL_CPUIDLib.inf
   COMPAL_IOLib|MyPkg/Application/Library/COMPAL_IOLib/COMPAL_IOLib.inf
   COMPAL_MSRLib|MyPkg/Application/Library/COMPAL_MSRLib/COMPAL_MSRLib.inf
   COMPAL_StringLib|MyPkg/Application/Library/COMPAL_StringLib/COMPAL_StringLib.inf
   COMPAL_AcpiLib|MyPkg/Application/Library/COMPAL_AcpiLib/COMPAL_AcpiLib.inf
   COMPAL_SmbiosLib|MyPkg/Application/Library/COMPAL_SmbiosLib/COMPAL_SmbiosLib.inf
+<<<<<<< HEAD
   
+=======
+<<<<<<< HEAD
+  
+=======
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
+>>>>>>> 99a4263664a676da44b0baab49bc40b83ac8f715
 
 [LibraryClasses.IA32]
   # To run in an emulation environment, such as Nt32Pkg, comment out the TimerLib
