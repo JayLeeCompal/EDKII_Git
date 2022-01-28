@@ -9,6 +9,7 @@
 #include <Library/MemoryAllocationLib.h>
 #include <COMPAL_StringLib.h>
 #include <IndustryStandard/SmBios.h>
+<<<<<<< HEAD
 #include <Library/ShellCEntryLib.h>
 
 #define INVALID_HANDLE  (UINT16) (-1)
@@ -37,6 +38,16 @@ LibGetSmbiosStructure
 
 CHAR16 *
 ASCII_to_UCS2(const char *s, UINTN len);
+=======
+CHAR16*
+ASCII_to_UCS2(const char *s, int len);
+
+CHAR8*
+LibGetSmbiosString (
+  IN  SMBIOS_STRUCTURE_POINTER    *Smbios,
+  IN  UINT16                      StringNumber
+  );
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
 
 
 VOID
@@ -45,6 +56,7 @@ PrintSmbiosEntryInfo(IN SMBIOS_TABLE_ENTRY_POINT  *Ptr);
 
 VOID
 EFIAPI
+<<<<<<< HEAD
 PrintSmbiosType0(
   IN SMBIOS_TABLE_TYPE0 *Type0,
   IN SMBIOS_STRUCTURE_POINTER SmbiosStruct
@@ -79,6 +91,29 @@ EFIAPI
 PrintSmbiosType22(
   IN SMBIOS_TABLE_TYPE22 *Type22,
   IN SMBIOS_STRUCTURE_POINTER mSmbiosStruct);
+=======
+PrintSmbiosType0(IN SMBIOS_TABLE_TYPE0 *Type0);
+
+VOID
+EFIAPI
+PrintSmbiosType1(IN SMBIOS_TABLE_TYPE1 *Type1);
+
+VOID
+EFIAPI
+PrintSmbiosType2(IN SMBIOS_TABLE_TYPE2 *Type2);
+
+VOID
+EFIAPI
+PrintSmbiosType3(IN SMBIOS_TABLE_TYPE3 *Type3);
+
+VOID
+EFIAPI
+PrintSmbiosType17(IN SMBIOS_TABLE_TYPE17 *Type17);
+
+VOID
+EFIAPI
+PrintSmbiosType22(IN SMBIOS_TABLE_TYPE22 *Type22);
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
 
 #endif
 

@@ -13,4 +13,7 @@
 #include <Guid/SmBios.h>
 
 #include <COMPAL_SmbiosLib.h>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886

@@ -23,6 +23,7 @@ Smbios_main (
   IN CHAR16 **Argv
 )
 {
+<<<<<<< HEAD
   
 
   EFI_STATUS  Status = EFI_SUCCESS;
@@ -57,6 +58,27 @@ Smbios_main (
   mSmbiosStruct.Raw  = (UINT8 *) (UINTN) (mSmbiosTable->TableAddress);
   
  
+=======
+  EFI_STATUS Status=EFI_SUCCESS;
+  EFI_GUID  SMBIOSTableGuid = SMBIOS_TABLE_GUID;
+  SMBIOS_TABLE_ENTRY_POINT  *SmbiosTable=NULL;
+  SMBIOS_STRUCTURE_POINTER  *SmbiosStruct=NULL;
+  UINTN                      Type;
+  CHAR8                     *str;
+  CHAR16                    *ptr;
+  
+  
+  //
+  //1. Find SMBIOS Entry
+  //
+  Status = EfiGetSystemConfigurationTable(&SMBIOSTableGuid, (VOID**)&SmbiosTable);
+  (CompareMem (SmbiosTable->AnchorString, "_SM_", 4) || Status)? Print(L"Can't find Smbios Table\n"):Print(L"Status : %d\n",Status);
+
+  SmbiosStruct->Raw = (UINT8*)(UINTN)SmbiosTable->TableAddress;
+  //
+  // Display Smbios Entry Ponint Information
+  //
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
   if ( Argc < 2 || Argc > 3 )
     {
      Usage();
@@ -65,6 +87,7 @@ Smbios_main (
     {
      if ( !StrCmp(Argv[1], L"-s") && Argc == 2)
       {
+<<<<<<< HEAD
        
        PrintSmbiosEntryInfo(mSmbiosTable);
        
@@ -81,11 +104,20 @@ Smbios_main (
        SmbiosHandle = SMBIOS_HANDLE_PI_RESERVED;
        Status = Smbios->GetNext (Smbios, &SmbiosHandle, NULL, &Header, NULL);
        
+=======
+       PrintSmbiosEntryInfo(SmbiosTable);
+       
+      }
+
+     else if ( !StrCmp(Argv[1], L"-t") && Argc==3 )
+      {
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
        Type = StrDecimalToUintn(Argv[2]);
      
        switch(Type)
          {
           case 0:
+<<<<<<< HEAD
             while (!EFI_ERROR(Status)) 
               {
                 if(Header->Type == 0)
@@ -233,17 +265,54 @@ Smbios_main (
                 Status = Smbios->GetNext (Smbios, &SmbiosHandle, NULL, &Header, NULL);
               }
              break;
+=======
+            //PrintSmbiosType0(SmbiosStruct->Type0);
+            str=LibGetSmbiosString(&SmbiosStruct,1);
+            ptr=ASCII_to_UCS2(str,StrLen(str));
+            Print(L"%s",ptr);
+            FreePool(ptr);
+            break;
+
+          case 1:
+            PrintSmbiosType1(SmbiosStruct->Type1);
+            break;
+
+          case 2:
+            PrintSmbiosType2(SmbiosStruct->Type2);
+            break;
+
+          case 3:
+            PrintSmbiosType3(SmbiosStruct->Type3);
+            break;
+
+          case 17:
+            PrintSmbiosType17(SmbiosStruct->Type17);
+            break;
+
+          case 22:
+            PrintSmbiosType22(SmbiosStruct->Type22);
+            break;
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
          
           default:
             Usage();
             break;
+<<<<<<< HEAD
         }
      }
+=======
+         }    
+       }
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
      else
       {
        Usage();
       }
+<<<<<<< HEAD
    }
+=======
+    } 
+>>>>>>> f11388ec90c614a77d9a70a1a35b77ba73734886
   return Status; 
 }
 
